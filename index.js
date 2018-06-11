@@ -14,12 +14,13 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  var speech =
+  var speech = "Successfully connected to Web API deployed on Heroku - https://cachatbotwebhook.herokuapp.com/"
+  speech +=
     req.body.result &&
     req.body.result.parameters &&
     req.body.result.parameters.echoText
       ? req.body.result.parameters.echoText
-      : "Successfully connected to Web API deployed on Heroku - https://cachatbotwebhook.herokuapp.com/";
+      : "Failed to connect to Web API deployed on Heroku - https://cachatbotwebhook.herokuapp.com/";
   return res.json({
     speech: speech,
     displayText: speech,
