@@ -14,7 +14,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  var speech = "Successfully connected to Web API deployed on Heroku - https://cachatbotwebhook.herokuapp.com/"
+  var speech = "Successfully connected to Web API deployed on Heroku - https://cachatbotwebhook.herokuapp.com/  \n The response is:-"
   speech +=
     req.body.result &&
     req.body.result.parameters &&
