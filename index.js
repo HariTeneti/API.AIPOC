@@ -14,12 +14,9 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  var speech =  '<style type="text/css">Successfully connected to Web API\n'+
-'.reg { font-size: 10pt; color:#000000; font-family:monospace } \n' +
-'.bigRed { font-size: 14pt; color:#ff0000; font-family:monospace } \n' +
-'</style>'
+  var speech = "Successfully connected to Web API deployed on Heroku - https://cachatbotwebhook.herokuapp.com/"  
+  speech += "The response is:-"
   
-  speech += "Successfully connected to Web API deployed on Heroku - https://cachatbotwebhook.herokuapp.com/  \r\n http://tene50-vs2017.tene50.com/CorporateActionsManager/Events  The response is:-"
   speech +=
     req.body.result &&
     req.body.result.parameters &&
