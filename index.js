@@ -14,7 +14,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  var speech = "Successfully connected to Web API deployed on Heroku - - GDS\CA DEMO TEST "  
+  var speech = "Successfully connected to Web API Test deployed on Heroku - - GDS\CA DEMO TEST "  
   speech += "The response is:-"
   
   speech +=
