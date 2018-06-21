@@ -20,8 +20,8 @@ restService.post("/echo", function(req, res) {
   speech +=
     req.body.result &&
     req.body.result.parameters &&
-    req.body.result.parameters.echoText
-      ? req.body.result.parameters.echoText
+    req.body.result.parameters.apiResponse
+      ? req.body.result.parameters.apiResponse
       : "Failed to connect to Web API deployed on Heroku - https://cachatbotwebhook.herokuapp.com/";
   return res.json({
     speech: speech,
